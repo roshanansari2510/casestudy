@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+  <form>
+    <table class="table table-hover w-50 h-30"
+      style="background-color: white;   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.5);">
+
+      <tbody>
+        <tr>
+          <th scope="row">Name</th>
+          <td><input type="text" class="field" name="name" placeholder="Enter name" required>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td><input type="text" class="field" name="email" placeholder="Enter email" 
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Phone no</th>
+          <td><input type="text" class="field" name="contact"  pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$"
+              placeholder="Enter phone no" required>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2"><input type="button" class="btn btn-primary" value="change">
+        </th>
+        </tr>
+      </tbody>
+
+    </table>
+  </form>

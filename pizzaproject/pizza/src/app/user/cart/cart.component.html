@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+  
+<div class="container" id="container1">
+  <div class="row">
+
+    <div class="column" *ngFor="let item of products">
+      <div class="parent">
+        <div class="preview">
+          <!-- <center> -->
+          <img src="{{item.product.productImage}}" alt="" class="img-responsive">
+          <!-- </center> -->
+        </div>
+
+        <div class="info">
+
+          <table>
+            <tr>
+              <td colspan="2">
+                <h6>{{item.product.productName}}</h6>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Size:-</h6>
+              </td>
+              <td>
+                <h6>{{item.product.productSize}}</h6>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Price:-</h6>
+              </td>
+
+              <td>
+                <h6><span class="product-price">{{item.product.productPrice}}</span>RS</h6>
+              </td>
+
+            </tr>
+
+
+            <tr>
+              <td>
+                <h6>Quantity:-</h6>
+              </td>
+
+              <td>
+                <h6>{{item.quantity}}</h6>
+              </td>
+
+            </tr>
+
+          </table>
+
+          <!-- <div class="product-quantity">
+            <input type="number" id="qty_input4" class="ab form-control form-control-sm"  min="1"
+              title="no of pizza"   (change)="update(pizza)">
+          </div> -->
+          <button (click)="removeItem(item)" class="btnn"> <i class="fa fa-trash" aria-hidden="true"></i></button>
+        </div>
+
+      </div>
+    </div>
+
+      <!------------------------------------------------total section------------------------------------------------------------------  -->
+
+    <div class="parent" style="background-color:rgb(235, 243, 251);margin-top: 15px;margin-bottom: 150px;" id="lastcol">
+
+      <div class="info">
+
+        <p style="margin-top: 5px;margin-bottom: 5px;">total = <b><span class="tot"> </span>Rs</b></p>
+        <p style="margin-top: 5px;margin-bottom: 5px;">delivery charge = <b><span class="dc">50</span>Rs</b></p>
+        <p style="margin-top: 5px;margin-bottom: 5px;">grand total =<b><span class="gt"> {{grandTotal}}</span>Rs</b></p>
+        <button class="btn btn-danger" style="margin-top: 5px;margin-bottom: 5px;margin-left: 5px;" (click)="emptyCart()" >Empty Cart</button>
+        <button [routerLink]="['/userhome']"class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px;margin-left: 5px;">Shop More</button>
+        <button class="btn btn-success" id="last" style="margin-top: 5px;margin-bottom: 5px;margin-left: 5px;">Check out</button>
+      </div>
+    </div>
+  </div>
+</div>

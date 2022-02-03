@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+  <app-glow></app-glow>
+  <!-- </div> -->
+
+  <main>
+    <section class="cards">
+
+      <div class="crd" *ngFor="let pizza of productList">
+        <div class="card__image-container">
+          <img src="../../../assets/{{pizza.productImage}}" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+        </div>
+        <div class="card__content">
+          <p class="card__title text--medium" style="text-align: center;">
+            {{pizza.productName}}
+          </p>
+          <p class="card__title text--medium" style="text-align: center;">{{pizza.productSize}}</p>
+          <div>
+          <p style="text-align: center;">Quantity
+          <select name="pQuantity" id="" class="form-control">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        </div>
+          <div class="card__info">
+            <p class="text--medium rs"><b>{{pizza.productPrice}}Rs.</b></p>
+            <p class="card__price text--medium bt"> <button id="add" (click)="addtocart(pizza,pQuantity)" class="btn btn-danger add"
+                data-val="false">+Add</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>

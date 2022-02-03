@@ -1,0 +1,27 @@
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark bb" id="xy">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li><a [routerLink]="['/userhome']" id="colarr">home</a></li>
+        <li><a [routerLink]="['/myprofile']" id="colarr">myprofile</a></li>
+        <li><a [routerLink]="['/useroffer']" id="colarr">Offers</a></li>
+
+        <!-- <li class="nav-item"><a href="track.html" id="colarr">track</a></li> -->
+        <!--<li class="nav-item"><a [routerLink]="['/userfeedback']" id="colarr">feedback</a></li>-->
+        <li class="nav-item"><a id="colarr" [routerLink]="['/']">logout</a></li>
+        <!-- <li class="nav-item"></li> -->
+
+      </ul>
+      <a [routerLink]="['/cart']" class="notification">
+        <i class="fa fa-shopping-cart" id="ct" >{{totalItem}}</i>
+        <!-- <span class="badge" id="notycount">{{totalItem}}</span> -->
+      </a>
+    </div>
+  </nav>
+
